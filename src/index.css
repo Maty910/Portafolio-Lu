@@ -21,18 +21,49 @@ a {
 a:hover {
   color: #535bf2;
 }
-
 body {
-  margin: 0;
-  display: flex;
+  background:
+      repeating-linear-gradient( 45deg,#0000 calc(-650%/13) calc(50%/13),#68ab4f 0 calc(100%/13),
+      #0000 0 calc(150%/13),#68ab4f 0 calc(200%/13),
+      #0000 0 calc(250%/13),#68ab4f 0 calc(300%/13)),repeating-linear-gradient( 45deg,#0000 calc(-650%/13) calc(50%/13),#68ab4f 0 calc(100%/13),
+      #0000 0 calc(150%/13),#68ab4f 0 calc(200%/13),
+      #0000 0 calc(250%/13),#68ab4f 0 calc(300%/13)) 41px 41px,
+      repeating-linear-gradient(-45deg,#0000 calc(-650%/13) calc(50%/13),#68ab4f 0 calc(100%/13),
+      #0000 0 calc(150%/13),#68ab4f 0 calc(200%/13),
+      #0000 0 calc(250%/13),#68ab4f 0 calc(300%/13)),repeating-linear-gradient(-45deg,#0000 calc(-650%/13) calc(50%/13),#68ab4f 0 calc(100%/13),
+      #0000 0 calc(150%/13),#68ab4f 0 calc(200%/13),
+      #0000 0 calc(250%/13),#68ab4f 0 calc(300%/13)) 41px 41px #092357;
+background-size: 62px 82px;
+  display: grid;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  margin: 0;
+}
+
+header {
+  background-color: #1a1a1a;
+  display: block;
+  /* justify-content: space-between; */
+  padding: 1.6em;
+  max-width: 40em;
+  margin: 0 auto;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.6em;
+  margin: 0 auto;
+  max-width: 40em;
+  text-align: center;
 }
 
 button {
