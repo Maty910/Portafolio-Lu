@@ -21,49 +21,249 @@ a {
 a:hover {
   color: #535bf2;
 }
+
+
+
+html, body {
+  width: 100%;
+  height: fit-content;
+  margin: 0;
+  padding: 0;
+}
+
+
 body {
-  /* background:
-      repeating-linear-gradient( 45deg,#0000 calc(-650%/13) calc(50%/13),#68ab4f 0 calc(100%/13),
-      #0000 0 calc(150%/13),#68ab4f 0 calc(200%/13),
-      #0000 0 calc(250%/13),#68ab4f 0 calc(300%/13)),repeating-linear-gradient( 45deg,#0000 calc(-650%/13) calc(50%/13),#68ab4f 0 calc(100%/13),
-      #0000 0 calc(150%/13),#68ab4f 0 calc(200%/13),
-      #0000 0 calc(250%/13),#68ab4f 0 calc(300%/13)) 41px 41px,
-      repeating-linear-gradient(-45deg,#0000 calc(-650%/13) calc(50%/13),#68ab4f 0 calc(100%/13),
-      #0000 0 calc(150%/13),#68ab4f 0 calc(200%/13),
-      #0000 0 calc(250%/13),#68ab4f 0 calc(300%/13)),repeating-linear-gradient(-45deg,#0000 calc(-650%/13) calc(50%/13),#68ab4f 0 calc(100%/13),
-      #0000 0 calc(150%/13),#68ab4f 0 calc(200%/13),
-      #0000 0 calc(250%/13),#68ab4f 0 calc(300%/13)) 41px 41px #092357;
-  background-size: 62px 82px; */
+  position: absolute;
   display: grid;
   place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-  margin: 0;
+  width: 100%;
+  max-width: 100vw;
+  height: 100vh;
+  /* min-width: 320px;
+  min-height: 100vh; */
 }
 
 header {
+  width: 99vw;
+  height: 100vh;
+  position: relative;
+  max-width: 99vw;
+
+  /* left: 0;
+  right: 0; */
+  
   background-color: #1a1a1a;
-  display: block;
+  background-image: url("../public/img/DALL·E\ 2025-01-29\ 11.40.59\ -\ A\ seamless\ pattern\ inspired\ by\ the\ Bauhaus\ art\ movement\,\ featuring\ colorful\ and\ abstract\ geometric\ shapes\ such\ as\ circles\,\ squares\,\ triangles\,\ and\ lin.webp");
+  background-position: 1.5px;
+  background-size: contain;
+  display: grid;
+  place-items: center;
+
   /* justify-content: space-between; */
-  padding: 1.6em;
-  max-width: 40em;
-  margin: 0 auto;
+  /* padding: 0px; */
+  /* z-index: 1; */
+}
+
+header img {
+  position: absolute;
+  /* width: auto; */
+  max-width: 100%;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+/*header*/ nav { 
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  overflow: hidden;
+
+  width: fit-content;
+  height: fit-content;
+  justify-content: flex-end;
+  
+  align-items: center;
+  /* max-width: 40em; */
+  /* margin: 0 auto; */
+  /* margin-right: 2.5vw; */
+  z-index: 2;
+}
+
+/* header*/ nav ul li {  
+  display: inline-block;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header p {
+  font-size: 1.5em;
+  font-family: 'Coiny';
+  font-weight: 500;
+  color: #242323;
+  margin: 0;
+  padding: 0;
+  background-color: #e0d1cb;
+
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30vh;
+  padding: 1vw;
+
+  text-align: center;
+  align-content: center;
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 4em;
+  font-family: 'Chango';
+  letter-spacing: .01px;
+
   line-height: 1.1;
+  background-color: #0087f6;
+  color: #5ed7ea;
+  padding: 5vw;
+  border-radius: 8px;
+
+  margin: 0;
 }
 
+h2 {
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-size: 45px;
+  font-weight: 500;
+  font-family: 'Coiny';
+  margin: 0 0;
+  text-align: left;
+
+  width: 50vw;
+  height: 10vh;
+
+  top: -12vh;
+  right: -20vw;
+
+  background-color: #da0e0b;
+  color: #ebd023;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+
+}
+
+h4{
+  font-size: 3em;
+  font-family: 'Bebas Neue';
+  letter-spacing: 8px;
+  text-align: right;
+  line-height: .9;
+  align-self: center;
+
+  margin: 1px;
+  background-color: #d02bb7;
+  color: #1b1b1b;
+  padding: 4px;
+  border-radius: 8px;
+
+  width: 25vw;
+  height: fit-content;
+  /* white-space: nowrap; */
+
+  display: flex;
+  flex-direction: column;
+  /* writing-mode: vertical-lr; */
+  text-orientation: upright;
+  position: relative;
+  top: -16vh;
+  right: 35vw;
+}
 section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center;;
   padding: 0 1.6em;
   margin: 0 auto;
-  max-width: 40em;
+  /* max-width: 40em; */
   text-align: center;
+  
+  background-color: #e0d1cb;
+  color: #242323;
+  
+}
+
+.about {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0px;
+  text-align: center;
+  
+  width: 99vw;
+  max-width: 99vw;
+  height: 100vh;
+
+  background-color: #e0d1cb;
+  color: #242323;
+}
+
+.about div { 
+  margin-top: 1em;
+  text-align: center;
+
+  width: 60vw;
+}
+
+.about img {
+  float: left;
+  shape-outside: margin-box;
+  width: 20vw;
+  height: 20vw;
+  border-radius: 48% 49% 44% 47%;
+  margin: 1em;
+}
+
+.about p {
+  font-size: .8em;
+  font-weight: 500;
+  font-family: 'Coiny';
+  margin: 0 auto;
+  padding: 0;
+  text-align: left;
+  
+
+}
+
+.about h3 {
+  font-size: 1.5em;
+  font-weight: 500;
+  font-family: 'bebas neue';
+  margin: 0;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding: 0;
+  text-align: left;
+  
+}
+
+.about button {
+  display: flex;
+  bottom: 0;
+  position: fixed;
+  right: 0;
+  overflow: hidden;
+  
 }
 
 button {
@@ -76,6 +276,7 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  margin: 0.2vw;
 }
 button:hover {
   border-color: #646cff;
