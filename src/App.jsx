@@ -34,9 +34,9 @@ function App() {
           <h3>Experiencia</h3>
           <p>He trabajado en diferentes empresas como Social Media Manager:</p>
           <ul>
-            <li>Empresa 1</li>
-            <li>Empresa 2</li>
-            <li>Empresa 3</li>
+            <li><img src="/img/\Fondo abstracto.jpg" alt="" />Empresa 1</li>
+            <li><img src="/img/\Fondo abstracto.jpg" alt="" />Empresa 2</li>
+            <li><img src="/img/\Fondo abstracto.jpg" alt="" />Empresa 3</li>
           </ul>
         </section>
         <section className="projects" id="projects">
