@@ -11,6 +11,35 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+}
+
+.scroll-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y proximity; /* Más suave que mandatory */
+  scroll-behavior: auto;
+}
+
+html {
+  scroll-snap-type: unset; /* Quitar esto */
+  scroll-behavior: unset; /* Quitar esto */
+}
+
+.home, section {
+  height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop:always;
+}
+
+.home, .about, .experience, .projects, .services, .contact {
+  padding-top: 10px;
+}                   
+
+body {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden; /* Evita doble scroll */
 }
 
 a {
@@ -43,7 +72,8 @@ body {
   min-height: 100vh; */
 }
 
-header {
+
+.home {
   width: 99vw;
   height: 100vh;
   position: relative;
@@ -52,8 +82,8 @@ header {
   /* left: 0;
   right: 0; */
   
-  background-color: #1a1a1a;
-  background-image: url("../public/img/DALL·E\ 2025-01-29\ 11.40.59\ -\ A\ seamless\ pattern\ inspired\ by\ the\ Bauhaus\ art\ movement\,\ featuring\ colorful\ and\ abstract\ geometric\ shapes\ such\ as\ circles\,\ squares\,\ triangles\,\ and\ lin.webp");
+  /* background-color: #1a1a1a; */
+  /* background-image: url("../public/img/DALL·E\ 2025-01-29\ 11.40.59\ -\ A\ seamless\ pattern\ inspired\ by\ the\ Bauhaus\ art\ movement\,\ featuring\ colorful\ and\ abstract\ geometric\ shapes\ such\ as\ circles\,\ squares\,\ triangles\,\ and\ lin.webp"); */
   background-position: 1.5px;
   background-size: contain;
   display: grid;
@@ -72,10 +102,10 @@ header img {
   opacity: 0.5;
 }
 
-/*header*/ nav { 
+nav { 
   position: fixed;
   top: 0;
-  right: 0;
+  right: 01vw;
   display: flex;
   overflow: hidden;
 
@@ -264,6 +294,54 @@ section {
   right: 0;
   overflow: hidden;
   
+}
+
+.experience {
+  width: 80vw;
+  max-width: 99vw;
+  height: 100vh;
+
+  z-index: 1;
+}
+
+.experience div video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+}
+
+.projects {
+  padding: 0;
+  width: 99vw;
+  height: 90vh;
+  position: relative;
+  overflow: hidden;
+  background-color: #e0d1cb;
+  background-size: 50%;
+  z-index: 1;
+  left: 0vw;
+  margin-bottom: 10vh;
+}
+
+.projects-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90vw, 3fr));
+  gap: 1em;
+  padding: 1em;
+  margin: 0 auto;
+  height: 100vh;
+  max-width: 80em;
+  background-color: #e0d1cb;
+}
+
+section {
+  height: 100vh;
 }
 
 button {
