@@ -253,6 +253,7 @@ nav ul li {
   transition: background-color 0.25s;
 
   font-family: 'Lobster';
+  font-size: larger;
 }
 
 .language {
@@ -277,6 +278,8 @@ nav ul li {
   border-radius: 15px;
 
   font-family: 'Roboto';
+  font-size: larger;
+  font-weight: 500;
 
   z-index: 2;
 }
@@ -425,6 +428,8 @@ section {
   
   border-radius: 15px;
   background-color: var(--marrón-oscuro);
+
+  font-size: 15px;
 }
 
 .experience {
