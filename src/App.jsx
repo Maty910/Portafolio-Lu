@@ -5,19 +5,19 @@ function App() {
       <div className="scroll-container">
         <nav>
           <ul>
-            {/* <li><button>Inicio</button></li>
-            <li><button>Proyectos</button></li>
-            <li><button>Experiencia</button></li>
-            <li><button>Contacto</button></li> */}
-            <li><button>Language</button></li>
+            <li><button>About me</button></li>
+            <li><button>Experience</button></li>
+            <li><button>Message me</button></li>
+            <button className="language">Language</button>
           </ul>
         </nav>
         <header className="home" id="home">
-            {/* <img src="/img/Fondo abstracto.jpg" alt="Fondo abstracto" /> */}
-            {/* <h1>Lucía Castro</h1>
-            <h2>Social Media Manager</h2>
-            <h4>Community Manager</h4> */}
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis atque quisquam odio, tempora repellat nisi eius error quo dolore asperiores aspernatur aliquid sequi facilis nesciunt enim pariatur! Dolore, at velit.</p>
+          <div className="home-content">
+            <h1 data-text="True growth lies in learning every day">
+              True growth <br/> lies in <br/> learning <br/> every day
+            </h1>
+            <button className="seework">See my work!</button>
+          </div>
         </header>
         <section className="about" id="about">
           <div>
