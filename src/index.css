@@ -168,11 +168,12 @@ header h1::after {
 
   margin-top: 3vh;
   padding: 1vw 1vw 1vw 6vw;
-  bottom: -125px;
+  /* bottom: -150px; netlify */
+  bottom: -69px;/*vs code*/
   left: -3.4px;
   right: 0;
   height: 80vh;
-  
+
   content: attr(data-text);
   position: absolute;
   color: var(--negro);
@@ -282,20 +283,10 @@ nav ul li {
 }
 
 h1 {
-  font-size: 4em;
-  font-family: 'Chango';
-  letter-spacing: .01px;
-
   line-height: 1.1;
-  background-color: #0087f6;
-  color: #5ed7ea;
-  padding: 5vw;
-  border-radius: 8px;
-
-  margin: 0;
 }
 
-h2 {
+/* h2 {
   display: flex;
   align-items: center;
   position: relative;
@@ -316,7 +307,7 @@ h2 {
   padding: 0.5em 1em;
   border-radius: 8px;
 
-}
+} */
 
 h4{
   font-size: 3em;
@@ -365,14 +356,14 @@ section {
   align-items: center;
   justify-content: center;
   padding: 0;
-  margin: 0px;
+  margin-top: 10vh;
   text-align: center;
   
   width: 99vw;
   max-width: 99vw;
   height: 100vh;
 
-  background-color: #e0d1cb;
+  background-color:var(--marrón-claro);
   color: #242323;
 }
 
@@ -392,36 +383,49 @@ section {
   margin: 1em;
 }
 
-.about p {
-  font-size: .8em;
-  font-weight: 500;
-  font-family: 'Coiny';
-  margin: 0 auto;
-  padding: 0;
+.about h2 {
+  font-family: 'Brawler';
+  color: var(--Rosita-pomelo);
   text-align: left;
-  
-
+  margin: 0;
 }
 
 .about h3 {
   font-size: 1.5em;
   font-weight: 500;
-  font-family: 'bebas neue';
+  font-family: 'Lobster';
+  color: var(--blanco);
+
+  line-height: .9;
+
   margin: 0;
-  margin-top: 5%;
+  margin-top: 2%;
   margin-bottom: 5%;
   padding: 0;
-  text-align: left;
-  
+  text-align: left;  
 }
 
-.about button {
+.about p {
+  font-size: .8em;
+  font-weight: 350;
+  font-family: 'Roboto';
+  font-style: italic;
+  color: var(--Rosita-pomelo);
+
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.about .lnkdnbutton {
   display: flex;
-  bottom: 0;
   position: fixed;
-  right: 0;
+  bottom: 15px;
+  right: 15px;
   overflow: hidden;
   
+  border-radius: 15px;
+  background-color: var(--marrón-oscuro);
 }
 
 .experience {

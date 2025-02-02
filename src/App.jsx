@@ -5,9 +5,9 @@ function App() {
       <div className="scroll-container">
         <nav>
           <ul>
-            <li><button>About me</button></li>
-            <li><button>Experience</button></li>
-            <li><button>Message me</button></li>
+            <li><button><a href="#about">About me</a></button></li>
+            <li><button><a href="#experience">Experience</a></button></li>
+            <li><button><a href="#contact">Message me</a></button></li>
             <button className="language">Language</button>
           </ul>
         </nav>
@@ -21,11 +21,16 @@ function App() {
         </header>
         <section className="about" id="about">
           <div>
-          <img src="/img/PERFIL.svg" />
-            <h3>¡Hola! Soy Lucía Castro, Social Media Manager! lore</h3>
-            <p>Me dedico a la gestión de redes sociales desde hace 5 años. Me apasiona el mundo digital y me encanta ayudar a las empresas a crecer en el mundo online. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis tempore nam quos necessitatibus possimus quidem et exercitationem dolore. Earum reprehenderit libero accusamus corrupti laborum ipsam. Distinctio quisquam quae rerum error.</p>
+            <img src="/img/PERFIL.svg" />
+            <h2>Lucía Castro</h2>
+            <h3>Social Media Manager, <br /> Community Manager & <br />Trafficker</h3>
+            <p>I'm a proactive, curious person with a passion for constant learning.
+              I focus on connecting brands with their audience authentically, optimizing 
+              every action for results. I'm always seeking new challenges and strategies 
+              to keep growing professionally.
+            </p>
+            <button className="lnkdnbutton"><a href="https://www.linkedin.com/in/luc%C3%ADa-castro-84a198281/" target="_blank" rel="noopener noreferrer">Contáctame en LinkedIn</a></button>
           </div>
-          <button><a href="https://www.linkedin.com/in/luc%C3%ADa-castro-84a198281/" target="_blank" rel="noopener noreferrer">Contáctame en LinkedIn</a></button>
         </section>
         <section className="experience" id="experience">
           <div className="video-background">
