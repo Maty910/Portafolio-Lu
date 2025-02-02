@@ -161,25 +161,18 @@ header h1 {
 
 header h1::after {
   font-size: 1em;
-  font-family: 'Alfa Slab One';
+  font-family: Alfa Slab One;
   font-weight: 500;
-  
   width: 400px;
   text-wrap: wrap;
 
-  color: var(--negro);
-  
   margin-top: 3vh;
-  padding: 1vw;
-  padding-left: 6vw;
-
-  bottom: -69px;
-  left: -2.4px;
+  padding: 1vw 1vw 1vw 6vw;
+  bottom: -125px;
+  left: -3.4px;
   right: 0;
   height: 80vh;
- 
-  /* text-shadow:#de0000 1px 1px 1px; */
-
+  
   content: attr(data-text);
   position: absolute;
   color: var(--negro);
