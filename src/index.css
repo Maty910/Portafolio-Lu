@@ -168,8 +168,7 @@ header h1::after {
 
   margin-top: 3vh;
   padding: 1vw 1vw 1vw 6vw;
-  /* bottom: -150px; netlify */
-  bottom: -69px;/*vs code*/
+  bottom: -125px; 
   left: -3.4px;
   right: 0;
   height: 80vh;
