@@ -188,7 +188,7 @@ header.home.es h1 {
   height: 71.5vh;
 }
 
-/* Estilos para ESPAÑOL */
+/* Estilos para INGLÉS */
 header.home.en h1 {
   /* Ejemplo de override: */
   width: 400px;
@@ -589,3 +589,97 @@ button {
     background-color: #ffffff;
   }
 } */
+
+/* 
+@media screen and (min-width: 2560px) {
+
+  header h1::after{
+    height: 78.28vh;
+  }
+
+  header.home.en h1::after {
+    height: 19vh;
+  }
+
+  header.home.es h1::after {
+    height: 10vh;
+  }
+} */
+
+/* Tablet (768px - 998px) */
+@media screen and (min-width: 768px) and (max-width: 998px) {
+  header h1::after{
+    height: 84.8vh;
+  }
+  header.home.es h1::after {
+    height: 85.9vh;
+  }
+  header.home.en h1::after {
+    height: 85.3vh;
+  }
+}
+
+/* Pantallas medianas (999px - 1023px) */
+@media screen and (min-width: 999px) and (max-width: 1023px) {
+  header h1::after {
+    height: 70vh;
+  }
+  header.home.en h1::after {
+    height: 80vh;
+  }
+  header.home.es h1::after {
+    height: 80.1vh;
+  }
+}
+
+/* Laptop (1024px - 1439px) */
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  header h1::after{
+    height: 73.5vh;
+  }
+  header.home.en h1::after {
+    height: 80vh;
+  }
+  header.home.es h1::after {
+    height: 80.1vh;
+  }
+}
+
+/* Laptop L (1440px - 1919px) */
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
+  header h1::after{
+    height: 68.28vh;
+  }
+  header.home.en h1::after {
+    height: 67.2vh;
+  }
+  header.home.es h1::after {
+    height: 68.3vh;
+  }
+}
+
+/* HD (1920px - 2559px) */
+@media screen and (min-width: 1920px) and (max-width: 2559px) {
+  header h1::after{
+    height: 68.28vh;
+  }
+  header.home.en h1::after {
+    height: 80vh;
+  }
+  header.home.es h1::after {
+    height: 80.1vh;
+  }
+}
+
+/* 4K (2560px+) */
+@media screen and (min-width: 2560px) {
+  header h1::after{
+    height: 68.28vh;
+  }
+  header.home.en h1::after {
+    height: 55.8vh;
+  }
+  header.home.es h1::after {
+    height: 53.3vh;
+  }
+}
