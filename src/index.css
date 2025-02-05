@@ -698,3 +698,16 @@ button {
     height: 85.3vh;
   }
 }
+
+/* pc lu (683px - 684px) */
+@media screen and (min-width: 683px) and (max-width: 684px) {
+  header h1::after{
+    height: 84.8vh;
+  }
+  header.home.es h1::after {
+    height: 83.4vh;
+  }
+  header.home.en h1::after {
+    height: 83.6vh;
+  }
+}
