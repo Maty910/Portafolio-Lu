@@ -37,9 +37,9 @@
   --color-scrollbar-track: #e0d1cb; */
 }
 
-/* *, *::before, *::after {
+*, *::before, *::after {
   box-sizing: border-box;
-} */
+}
 
 .scroll-container {
   height: 100vh;
@@ -202,7 +202,7 @@ header.home.en h1 {
 
 header .seework {
   position: absolute;
-  bottom: 16vh;
+  bottom: 11vh;
   left: 8%;
   transform: translateX(-50%);
   margin-left: 2vw;
@@ -642,41 +642,43 @@ button {
   }
 }
 
-/* Laptop (1024px - 1439px) */
+/* MI PC Laptop (1024px - 1439px) */
 @media screen and (min-width: 1030px) and (max-width: 1439px) {
   header h1::after{
     font-size: 2.8rem;
   }
   header.home.en h1::after {
-    height: 10.1em;
+    height: 86.7vh;
   }
   header.home.es h1::after {
-    height: 105.5%;
+    height: 86.8vh;
   }
 }
 
-/* Pantallas medianas (999px - 1023px) */
+/* mi pc */
 @media screen and (min-width: 1028px) and (max-width: 1029.33px) {
   header h1::after {
     height: 70vh;
   }
   header.home.en h1::after {
-    height: 810vh;
+    height: 86.1vh;
   }
   header.home.es h1::after {
-    height: 80.1vh;
+    height: 86.3vh;
   }
 }
+
+/*laptop*/
 
 @media screen and (min-width: 999px) and (max-width: 1027px) {
   /* header h1::after{
     font-size: 2.8rem;
   } */
   header.home.en h1::after {
-    height: 74.1vh;
+    height: 79.3vh;
   }
   header.home.es h1::after {
-    height: 73.5vh;
+    height: 78.8vh;
   }
 }
 
