@@ -130,15 +130,17 @@ header {
 
 header .home-content {
   display: grid;
-  place-items: center;
+  grid-template-rows: 1fr 1fr;
+  /* place-content: center normal ; */
+  /* grid-column: 1/4; */
 
-  padding: 0 1.6em;
+  padding: 0 4em;
   margin: 0 auto;
-  max-width: 45em;
+  /* max-width: 45em; */
   text-align: center;
 
   width: 100vw;
-  /* height: 90vh; */
+  height: fit-content;
   z-index: 1;
 }
 
@@ -151,17 +153,17 @@ header h1 {
   color: var(--blanco);
   background-color: transparent;
   
-  margin-top: 3vh;
-  padding: 1vw;
-  padding-left: 6vw;
+  margin-top: 0;
+  /* padding: 1vw; */
+  /* padding-left: 6vw; */
 
   position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
+  /* left: 0; */
+  /* right: 10px; */
 
-  width: 400px;
-  height: 75vh;
+  width: 30%;
+  height: auto;
 
   text-align: left;
   align-content: center;
@@ -174,23 +176,31 @@ header h1 {
 }
 
 header h1::after {
-  font-size: 1em;
-  font-family: Alfa Slab One;
+  font-family: 'Alfa Slab One';
   font-weight: 500;
   width: 400px;
-  text-wrap: wrap;
 
-  margin-top: 3vh;
-  padding: 1vw 1vw 1vw 6vw;
-  bottom: -125px; 
-  left: -3.4px;
-  right: 0;
-  height: 80vh;
-
-  content: attr(data-text);
   position: absolute;
+  content: attr(data-text);
   color: var(--negro);
-  z-index: 1;
+  z-index: 2; /* Ensure it is above the h1 */
+
+  background-color: transparent;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-top: -3px;
+  margin-left: -3px;
+
+  width: 100%;
+  height: 75vh;
+
+  text-align: left;
+
+  text-shadow: var(--negro) 1px 1px .1px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 
@@ -198,16 +208,16 @@ header h1::after {
 header.home.es h1 {
   /* Ejemplo de override: */
   width: 400px;
-  left: 0;
-  height: 71.5vh;
+  /* left: 0; */
+  /* height: 71.5vh; */
 }
 
 /* Estilos para INGLÉS */
 header.home.en h1 {
   /* Ejemplo de override: */
   width: 400px;
-  left: 0;
-  height: 80vh;
+  /* left: 0; */
+  /* height: 80vh; */
 }
 
 header .seework {
@@ -607,107 +617,3 @@ button {
   }
 } */
 
-/* 4K (2560px+) */
-@media screen and (min-width: 2560px) {
-  header h1::after{
-    height: 68.28vh;
-  }
-  header.home.en h1::after {
-    height: 55.8vh;
-  }
-  header.home.es h1::after {
-    height: 53.3vh;
-  }
-}
-
-/* HD (1920px - 2559px) */
-@media screen and (min-width: 1920px) and (max-width: 2559px) {
-  header h1::after{
-    height: 68.28vh;
-  }
-  header.home.en h1::after {
-    height: 80vh;
-  }
-  header.home.es h1::after {
-    height: 80.1vh;
-  }
-}
-
-/* Laptop L (1440px - 1919px) */
-@media screen and (min-width: 1440px) and (max-width: 1919px) {
-  header h1::after{
-    height: 68.28vh;
-  }
-  header.home.en h1::after {
-    height: 74.5vh;
-  }
-  header.home.es h1::after {
-    height: 73.3vh;
-  }
-}
-
-/* MI PC Laptop (1024px - 1439px) */
-@media screen and (min-width: 1030px) and (max-width: 1439px) {
-  header h1::after{
-    font-size: 2.8rem;
-  }
-  header.home.en h1::after {
-    height: 86.7vh;
-  }
-  header.home.es h1::after {
-    height: 86.8vh;
-  }
-}
-
-/* mi pc */
-@media screen and (min-width: 1028px) and (max-width: 1029.33px) {
-  header h1::after {
-    height: 70vh;
-  }
-  header.home.en h1::after {
-    height: 86.1vh;
-  }
-  header.home.es h1::after {
-    height: 86.3vh;
-  }
-}
-
-/*laptop*/
-
-@media screen and (min-width: 999px) and (max-width: 1027px) {
-  /* header h1::after{
-    font-size: 2.8rem;
-  } */
-  header.home.en h1::after {
-    height: 79.3vh;
-  }
-  header.home.es h1::after {
-    height: 78.8vh;
-  }
-}
-
-/* Tablet (768px - 998px) */
-@media screen and (min-width: 768px) and (max-width: 998px) {
-  header h1::after{
-    height: 84.8vh;
-  }
-  header.home.es h1::after {
-    height: 85.9vh;
-  }
-  header.home.en h1::after {
-    height: 85.3vh;
-  }
-}
-
-/* pc lu (683px - 684px) */
-@media screen and (min-width: 683px) and (max-width: 684px) {
-  header h1::after{
-    height: 84.8vh;
-  }
-  header.home.es h1::after {
-    height: 83.4vh;
-  }
-  header.home.en h1::after {
-    height: 83.6vh;
-  }
-}

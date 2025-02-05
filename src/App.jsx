@@ -15,7 +15,7 @@ function App() {
           <ul>
             <li><button><a href="#about">{language === 'es' ? 'Sobre mí' : 'About me'}</a></button></li>
             <li><button><a href="#experience">{language === 'es' ? 'Experiencia' : 'Experience'}</a></button></li>
-            <li><button><a href="#contact">{language === 'es' ? 'Contáctame' : 'Message me'}</a></button></li>
+            <li><button><a href="#contact">{language === 'es' ? 'Contactame' : 'Message me'}</a></button></li>
             <button className="language" onClick={toggleLanguage}>
               {language === 'es' ? 'English' : 'Español'}
             </button>
