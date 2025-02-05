@@ -45,7 +45,7 @@ function App() {
           </div>
         </section>
         <section className="experience" id="experience">
-          <div className="video-background">
+          <div className="img-background">
             <img src="/img/fondo textura.png" alt="" />
           </div>
           <h3>{language === 'es' ? 'Experiencia' : 'Experience'}</h3>
