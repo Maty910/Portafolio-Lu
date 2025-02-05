@@ -154,13 +154,10 @@ header h1 {
   background-color: transparent;
   
   margin-top: 0;
-  /* padding: 1vw; */
-  /* padding-left: 6vw; */
 
   position: absolute;
-  top: 0;
-  /* left: 0; */
-  /* right: 10px; */
+  top: 8vw;
+  left: 6vw;
 
   width: 30%;
   height: auto;
