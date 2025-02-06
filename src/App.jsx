@@ -41,13 +41,13 @@ function App() {
               'Soy una persona proactiva, curiosa y apasionada por el aprendizaje constante. Me enfoco en conectar marcas con su audiencia de manera auténtica, optimizando cada acción para obtener resultados. Siempre estoy en busca de nuevos desafíos y estrategias para seguir creciendo profesionalmente.' : 
               'I am a proactive, curious person with a passion for constant learning. I focus on connecting brands with their audience authentically, optimizing every action for results. I am always seeking new challenges and strategies to keep growing professionally.'}
             </p>
-            <button className="lnkdnbutton"><a href="https://www.linkedin.com/in/luc%C3%ADa-castro-84a198281/" target="_blank" rel="noopener noreferrer"><img src="/img/lkdn logo.png" alt="" /></a></button>
+            <button className="lnkdnbutton"><a href="" target="_blank" rel="noopener noreferrer"><img src="/img/lkdn logo.png" alt="" /></a></button>
+            <button className="email-button">
+               <a href="mailto:ejemplo@gmail.com" target="_blank">{language === 'es' ? 'Enviar correo' : 'Send Email'}</a>
+            </button>
           </div>
         </section>
         <section className="experience" id="experience">
-          <div className="img-background">
-            <img src="/img/fondo textura.png" alt="" />
-          </div>
           <h3>{language === 'es' ? 'Experiencia' : 'Experience'}</h3>
           <p>{language === 'es' ? 'He trabajado en diferentes empresas como Social Media Manager:' : 'I have worked in different companies as a Social Media Manager:'}</p>
           <ul>
@@ -83,7 +83,7 @@ function App() {
         <section className="contact" id="contact">
           <h3>{language === 'es' ? 'Contacto' : 'Contact'}</h3>
           <p>{language === 'es' ? 'Si quieres contactar conmigo, puedes hacerlo a través de LinkedIn o enviándome un correo electrónico a:' : 'If you want to contact me, you can do so through LinkedIn or by sending me an email at:'}</p>
-          <a href="mailto"> </a>
+          <a href="mailto:ejemplo@gmail.com"> mail</a>
           <form action="">
             <input type="text" placeholder={language === 'es' ? 'Nombre' : 'Name'} />
             <input type="email" placeholder={language === 'es' ? 'Correo electrónico' : 'Email'} />
