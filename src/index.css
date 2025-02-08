@@ -113,11 +113,14 @@ html, body {
   /* background-color: #1a1a1a; */
   /* background-image: url("../public/img/DALL·E\ 2025-01-29\ 11.40.59\ -\ A\ seamless\ pattern\ inspired\ by\ the\ Bauhaus\ art\ movement\,\ featuring\ colorful\ and\ abstract\ geometric\ shapes\ such\ as\ circles\,\ squares\,\ triangles\,\ and\ lin.webp"); */
   /* background-position: 600px; */
-  background-image: url("/img/fondo textura.png");
-  background-size:10%;
+
+  /* background-image: url("/img/fondo textura.png");
+  background-size:cover;
   background-repeat:repeat;
-  background-position-x: -11px;
-  background-position-y: -10px;
+  background-position: center; */
+  
+  background-position-x: -10px;
+  /* background-position-y: -10px; */
 
   display: grid;
   place-items: center;
@@ -130,7 +133,7 @@ html, body {
 header {
   width: 100vw;
   height: 85vh;
-  background-color: var(--Rosita-pomelo);
+  /* background-color: var(--Rosita-pomelo); */
 }
 
 header .home-content {
@@ -255,7 +258,7 @@ nav {
   display: flex;
   /* overflow: hidden; */
   
-  background-color: var(--Rosita-pomelo);
+  background-color: none;
 
   width: 100vw;
   height: fit-content;
@@ -271,6 +274,8 @@ nav ul {
   place-content: center;
 
   list-style-type: none;
+
+  background-color: none;
 
   margin: 0;
   padding: 0;
@@ -293,6 +298,16 @@ nav ul li {
 
   font-family: 'Lobster';
   font-size: larger;
+}
+
+.home-background {
+  background-image: url("/img/fondo textura.png");
+  background-size: cover;
+  background-repeat: repeat;
+  /* background-position: center; */
+  background-position-y: -600px;
+  background-color: var(--Rosita-pomelo) ;
+
 }
 
 .language {
