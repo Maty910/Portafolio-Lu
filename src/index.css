@@ -53,16 +53,14 @@
   scrollbar-width: none;  /* Firefox */
 }
 
-.scroll-container {
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y proximity; /* Más suave que mandatory */
-  scroll-behavior: auto;
-}
+/* .scroll-container {
+ 
+} */
 
 html {
-  scroll-snap-type: unset; 
+  scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
+  overflow-y: scroll;
 }
 
 nav, section {
@@ -158,7 +156,7 @@ header .home-content {
 
 
 header h1 {
-  font-size: 2.8em;
+  font-size: 3.8rem;
   font-family: 'Alfa Slab One';
   font-weight: 500;
   
@@ -168,10 +166,10 @@ header h1 {
   margin-top: 0;
 
   position: absolute;
-  top: 8vw;
+  top: 3vw;
   left: 6vw;
 
-  width: 30%;
+  width: 35%;
   height: auto;
 
   text-align: left;
@@ -216,7 +214,7 @@ header h1::after {
 /* Estilos para ESPAÑOL */
 header.home.es h1 {
   /* Ejemplo de override: */
-  width: 400px;
+  width: 600px;
   /* left: 0; */
   /* height: 71.5vh; */
 }
@@ -224,7 +222,7 @@ header.home.es h1 {
 /* Estilos para INGLÉS */
 header.home.en h1 {
   /* Ejemplo de override: */
-  width: 400px;
+  width: 600px;
   /* left: 0; */
   /* height: 80vh; */
 }
@@ -262,7 +260,7 @@ nav {
   display: flex;
   /* overflow: hidden; */
   
-  background-color: none;
+  background: transparent;
 
   width: 100vw;
   height: fit-content;
@@ -279,7 +277,7 @@ nav ul {
 
   list-style-type: none;
 
-  background-color: none;
+  background: transparent;
 
   margin: 0;
   padding: 0;
@@ -297,12 +295,23 @@ nav ul li {
 
   padding: 0.5em 1em;
   border-radius: 8px;
+  border: none;
 
-  background: none;
+  background: transparent;
 
   font-family: 'Lobster';
   font-size: larger;
 }
+
+nav ul li a {
+  font-size: .8rem;
+  background: transparent;
+}
+
+nav ul li a:hover {
+  /* box-shadow: 0px 10px 20px -6px rgb(26, 26, 26); */
+  text-shadow: 0px 1px 0px #1a1a1a;
+} 
 
 .home-background {
   background-image: url("/img/fondo textura.png");
@@ -519,10 +528,7 @@ section {
   z-index: 1;
   width:3.5vw;
   height:3.5vw;
-}
-
-.about .lnkdnbutton {
-  display: flex;
+  
   align-items: center;
   justify-content: center;
 }

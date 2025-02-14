@@ -1,5 +1,5 @@
 import { useEffect,useState } from 'react';
-import ScrollContainer from './Components/ScrollContainer';
+// import ScrollContainer from './Components/ScrollContainer';
 import Home from './Components/Home';
 import About from './Components/About';
 import Experience from './Components/Experience';
@@ -13,7 +13,7 @@ function App() {
 
   return (
     <>
-      <ScrollContainer> 
+      {/* <ScrollContainer>  */}
         <Home/>
         <About/>
         <Experience />
@@ -55,7 +55,7 @@ function App() {
         <footer id="footer">
           <p>© 2025 Lucía Castro. {language === 'es' ? 'Todos los derechos reservados.' : 'All rights reserved.'}</p>
         </footer>
-      </ScrollContainer>
+      {/* </ScrollContainer> */}
     </>
   )
 }
