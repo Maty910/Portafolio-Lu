@@ -20,7 +20,7 @@ const About = () => {
 				<p className="clickhere">
 					{language === 'es' ? 'Crezcamos juntos' : 'Lets grow together'}
 					<button className="email-button">
-							<a data-text='Click hereee' href="mailto:. mailto:" target="_blank">{language === 'es' ? 'Click acá' : 'Click here'}</a>
+							<a data-text={language === 'es' ? 'Click acá' : 'Click here'} href="mailto:. mailto:" target="_blank">{language === 'es' ? 'Click acá' : 'Click here'}</a>
 					</button>
 				</p>
 			</div>
