@@ -41,6 +41,7 @@ const Home = () => {
           <button className="seework">
             <a href="#about">{language === 'es' ? '¡Ver más!' : 'Learn more!'}</a>
           </button>
+          <img className="arrows" src="./img/arrows.png" alt="" />
         </div>
       </header>
     </div>

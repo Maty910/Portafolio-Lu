@@ -104,7 +104,7 @@ html, body {
 
 .home {
   width: 100vw;
-  height: 85vh;
+  height: 75vh;
   position: relative;
   max-width: 100vw;
 
@@ -210,7 +210,6 @@ header h1::after {
   letter-spacing: 1px;
 }
 
-
 /* Estilos para ESPAÑOL */
 header.home.es h1 {
   /* Ejemplo de override: */
@@ -229,7 +228,7 @@ header.home.en h1 {
 
 header .seework {
   position: absolute;
-  bottom: 24vh;
+  bottom: 12vh;
   left: 9%;
   transform: translateX(-50%);
   margin-left: 2vw;
@@ -250,8 +249,21 @@ header .seework {
   height: 6vh;
 }
 
+header .seework:hover {
+  background-color: var(--marrón-oscuro);
+}
+
 header .seework a {
   color: var(--blanco);
+}
+
+header .home-content .arrows {
+  position: absolute;
+  
+  width: 170px;
+
+  top:5%;
+  right: 110px;
 }
 
 nav { 
@@ -543,6 +555,8 @@ section {
   display: flex;
   flex-direction: column;
 
+  background-color: transparent;
+
   width: 15vw;
 
   margin: 0;
@@ -557,6 +571,10 @@ section {
   align-items: center;
   flex-wrap: wrap;
   z-index: 10;
+}
+
+.about .clickhere::after {
+  content: attr(data-text);
 }
 
 .about .email-button a {
