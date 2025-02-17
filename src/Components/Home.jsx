@@ -3,13 +3,13 @@ import { useEffect, useState } from "react";
 const Home = () => {
   const [language, setLanguage] = useState('es');
 
-  useEffect(() => {
-    setLanguage('en');
-  }, []);
-  
   const toggleLanguage = () => {
     setLanguage((prevLanguage) => (prevLanguage === 'es' ? 'en' : 'es'));
   };
+
+  useEffect(() => {
+    setLanguage('en');
+  }, []);
 
   return (
     <div className='home-background'>
