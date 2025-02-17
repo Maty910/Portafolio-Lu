@@ -1,43 +1,24 @@
-import { useEffect,useState, useRef } from 'react';
+import { useEffect,useState } from 'react';
+
 import Home from './Components/Home';
 import About from './Components/About';
 import Experience from './Components/Experience';
-
-import LocomotiveScroll from 'locomotive-scroll';
-import 'locomotive-scroll/dist/locomotive-scroll.css';
+import ScrollContainer from './Components/ScrollContainer.jsx';
 
 function App() {
   const [language, setLanguage] = useState('es');
-  const ScrollContainerRef = useRef(null)  
+  
 
   useEffect(() => {
     setLanguage('en');
   }, []);
 
-  useEffect(() => {
-    const locoScroll = new LocomotiveScroll({
-      el: ScrollContainerRef.current,
-      smooth: true, 
-      inertia: 0.8, //ajustar valor de la inercia
-      smartphone: {
-        smooth: true
-      },
-      tablet: {
-        smooth: true
-      }
-    })
-
-    return () => {
-      if (locoScroll) locoScroll.destroy()
-    }
-  }, [])
-
   return (
     <>
-      <div data-scroll-container ref={ScrollContainerRef}>
+      <ScrollContainer>
         <Home/>
         <About/>
-        <Experience />
+        <Experience />   
         <section className="projects" id="projects">
           <div className="projects-list">
             <h3>{language === 'es' ? 'Proyectos' : 'Projects'}</h3>
@@ -76,7 +57,7 @@ function App() {
         <footer id="footer">
           <p>© 2025 Lucía Castro. {language === 'es' ? 'Todos los derechos reservados.' : 'All rights reserved.'}</p>
         </footer>
-      </div>
+      </ScrollContainer>
     </>
   )
 }
