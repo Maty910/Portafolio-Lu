@@ -107,28 +107,11 @@ html, body {
   height: 75vh;
   position: relative;
   max-width: 100vw;
-
-  /* left: 0;
-  right: 0; */
-  
-  /* background-color: #1a1a1a; */
-  /* background-image: url("../public/img/DALL·E\ 2025-01-29\ 11.40.59\ -\ A\ seamless\ pattern\ inspired\ by\ the\ Bauhaus\ art\ movement\,\ featuring\ colorful\ and\ abstract\ geometric\ shapes\ such\ as\ circles\,\ squares\,\ triangles\,\ and\ lin.webp"); */
-  /* background-position: 600px; */
-
-  /* background-image: url("/img/fondo textura.png");
-  background-size:cover;
-  background-repeat:repeat;
-  background-position: center; */
   
   background-position-x: -10px;
-  /* background-position-y: -10px; */
 
   display: grid;
   place-items: center;
-
-  /* justify-content: space-between; */
-  /* padding: 0px; */
-  /* z-index: 1; */
 }
 
 
@@ -169,7 +152,7 @@ header h1 {
   top: 3vw;
   left: 6vw;
 
-  width: 35%;
+  /* width: 900px; */
   height: auto;
 
   text-align: left;
@@ -185,7 +168,6 @@ header h1 {
 header h1::after {
   font-family: 'Alfa Slab One';
   font-weight: 500;
-  width: 400px;
 
   position: absolute;
   content: attr(data-text);
@@ -200,7 +182,6 @@ header h1::after {
   margin-top: -3px;
   margin-left: -3px;
 
-  width: 100%;
   height: 75vh;
 
   text-align: left;
@@ -212,23 +193,17 @@ header h1::after {
 
 /* Estilos para ESPAÑOL */
 header.home.es h1 {
-  /* Ejemplo de override: */
   width: 600px;
-  /* left: 0; */
-  /* height: 71.5vh; */
 }
 
 /* Estilos para INGLÉS */
 header.home.en h1 {
-  /* Ejemplo de override: */
   width: 600px;
-  /* left: 0; */
-  /* height: 80vh; */
 }
 
 header .seework {
   position: absolute;
-  bottom: 12vh;
+  bottom: 3vh;
   left: 9%;
   transform: translateX(-50%);
   margin-left: 2vw;
@@ -619,7 +594,7 @@ section {
   /* letter-spacing: 1px; */
 }
 
-.experience {
+/* .experience {
   width: 100vw;
   max-width: 100vw;
   height: 100vh;
@@ -667,7 +642,7 @@ section {
   object-position: center;
   border-radius: 50%;
   margin: 1em;
-}
+} */
 
 .projects {
   padding: 0;
@@ -727,6 +702,61 @@ button {
 
   cursor: pointer;
 }
+
+.phone-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem; /* Espacio entre columnas */
+  margin: 0; /* Margen superior e inferior */
+
+  align-items: baseline;
+  
+  width: 100%;
+  height: 100vh;
+
+  background-image: url() ;
+}
+
+.phone-card {
+  flex: 1; /* Cada columna ocupa el mismo ancho */
+  text-align: center; /* Centrar texto e imágenes */
+}
+
+.phone-mockup {
+  width: 100%;
+  max-width: 400px; /* Ajustá según el tamaño que quieras */
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Centra la imagen y da margen inferior */
+  
+}
+
+.phone-card ul {
+  list-style-type: none; /* Sacar puntos de la lista */
+  padding: 0;
+}
+
+.phone-card li {
+  font-family: 'Brawler';
+  font-size: 1.1rem;
+
+  width: 360px;
+
+  margin: .5rem;
+  /* Podés usar un ícono de check con pseudo-elementos o FontAwesome */
+  position: relative;
+  padding-left: 6.5rem; /* Espacio para el ícono */
+  text-align: start;
+
+}
+
+.phone-card li::before {
+  content: '✔'; /* O usá FontAwesome con content: '\f00c' y font-family: 'FontAwesome' */
+  position: absolute;
+  left: 80px;
+  color: green; /* Ajustá color del check */
+}
+
 
 /* @media (prefers-color-scheme: light) {
   :root {

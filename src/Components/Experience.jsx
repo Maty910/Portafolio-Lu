@@ -8,15 +8,38 @@ const Experience = () => {
   }, []);
 
   return (
-    <section className="experience" id="experience">
-      <h3>{language === 'es' ? 'Experiencia' : 'Experience'}</h3>
-      <p>{language === 'es' ? 'He trabajado en diferentes empresas como Social Media Manager:' : 'I have worked in different companies as a Social Media Manager:'}</p>
-      <ul>
-        <li><img src="/img/\Fondo abstracto.jpg" alt="" />{language === 'es' ? 'Empresa 1' : 'Company 1'}</li>
-        <li><img src="/img/\Fondo abstracto.jpg" alt="" />{language === 'es' ? 'Empresa 2' : 'Company 2'}</li>
-        <li><img src="/img/\Fondo abstracto.jpg" alt="" />{language === 'es' ? 'Empresa 3' : 'Company 3'}</li>
-      </ul>
-    </section>       
+    <section className="phone-section">
+    {/* <!-- Teléfono 1 --> */}
+      <div className="phone-card">
+      <i className="fa fa-snowflake"/>
+        <img className="phone-mockup" src="./img/phone.png" alt="Teléfono 1" />
+        <ul>
+          <li>Claridad</li>
+          <li>Educativo de valor</li>
+          <li>Curiosidad</li>
+        </ul>
+      </div>
+
+    {/* <!-- Teléfono 2 (con video, por ejemplo) --> */}
+      <div className="phone-card">
+        {/* <!-- Podés poner un video dentro de la “pantalla” del teléfono --> */}
+        <img className="phone-mockup" src="./img/phone.png" alt="Teléfono 3" />
+        <ul>
+          <li>Generar confianza</li>
+          <li>Responder dudas</li>
+          <li>Llamado a la acción claro</li>
+        </ul>
+      </div>
+
+    {/* <!-- Teléfono 3 --> */}
+      <div className="phone-card">
+      <img className="phone-mockup" src="./img/phone.png" alt="Teléfono 3" />
+        <ul>
+          <li>Urgencia</li>
+          <li>CTA claro y directo</li>
+        </ul>
+      </div>
+    </section>    
   )
 }
 
