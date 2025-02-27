@@ -18,7 +18,7 @@ const About = () => {
 					'I’m a proactive, curious person with a passion for constant learning. I focus on connecting brands with their audience authentically, optimizing every action for results. I’m always seeking new challenges and strategies to keep growing professionally.'}
 				</p>
 				<p className="clickhere">
-					{language === 'es' ? 'Crezcamos juntos' : 'Lets grow together'}
+					{language === 'es' ? 'Crezcamos juntos' : 'Let’s grow together'}
 					<button className="email-button">
 							<a data-text={language === 'es' ? 'Click acá' : 'Click here'} href="mailto:. mailto:" target="_blank">{language === 'es' ? 'Click acá' : 'Click here'}</a>
 					</button>
