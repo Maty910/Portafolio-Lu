@@ -1,5 +1,12 @@
 import { useState, useEffect } from "react";
 
+import PhoneCard from "./PhoneCard"
+
+import carousel1 from '../assets/carousel1.jpg'
+import carousel2 from '../assets/carousel2.jpg'
+import carousel3 from '../assets/carousel3.jpg'
+import carousel4 from '../assets/carousel4.jpg'
+
 const Experience = () => {
   const [language, setLanguage] = useState('es');
 
@@ -7,40 +14,49 @@ const Experience = () => {
     setLanguage('en');
   }, []);
 
+  // const carouselImages = [
+  //   '.img/phone1.jng'
+  // ]
+
   return (
     <section className="phone-section">
-    {/* <!-- Teléfono 1 --> */}
-      <div className="phone-card">
-      <i className="fa fa-snowflake"/>
-        <img className="phone-mockup" src="./img/phone.png" alt="Teléfono 1" />
+      <video
+        className="video-background"
+        autoPlay
+        loop
+        muted
+        preload="auto"
+        src="/img/fondo.mp4"
+        type="video/mp4"
+        onError={(e) => console.error("Error loading video:", e)}
+      ></video>
+      {/* <!-- Teléfono 1 --> */}
+      <PhoneCard type="carousel" images={[carousel1, carousel2, carousel3, carousel4]}>
         <ul>
           <li>Claridad</li>
           <li>Educativo de valor</li>
           <li>Curiosidad</li>
         </ul>
-      </div>
-
-    {/* <!-- Teléfono 2 (con video, por ejemplo) --> */}
-      <div className="phone-card">
-        {/* <!-- Podés poner un video dentro de la “pantalla” del teléfono --> */}
-        <img className="phone-mockup" src="./img/phone.png" alt="Teléfono 3" />
+      </PhoneCard>
+      {/* <!-- Teléfono 2 (con video, por ejemplo) --> */}
+      <PhoneCard type="single" images={[carousel1]}>
         <ul>
           <li>Generar confianza</li>
           <li>Responder dudas</li>
           <li>Llamado a la acción claro</li>
         </ul>
-      </div>
-
-    {/* <!-- Teléfono 3 --> */}
-      <div className="phone-card">
-      <img className="phone-mockup" src="./img/phone.png" alt="Teléfono 3" />
+      </PhoneCard>
+      {/* <!-- Teléfono 3 --> */}
+      <PhoneCard type="single" images={[carousel1]}>
         <ul>
-          <li>Urgencia</li>
-          <li>CTA claro y directo</li>
+          <li>Generar confianza</li>
+          <li>Responder dudas</li>
+          <li>Llamado a la acción claro</li>
         </ul>
-      </div>
-    </section>    
-  )
+      </PhoneCard>
+    </section>
+  );
 }
+
 
 export default Experience
