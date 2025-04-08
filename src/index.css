@@ -804,19 +804,43 @@ button {
 .phone-screen {
   position: absolute;
   width: 80%;
-
+  
   top: 0;
+  background-color: rgb(249, 0, 0);
+
+  border-radius: 10px ;
+  display: grid; 
+  align-items: center;
+  justify-content: center;
+  left: 28%;
+  top: 20px;
+  max-width: 45%;
+  max-height: 75%;
+  height: 75%;
 }
 
-.phone-screen img {
-  position: relative;
+.phone-card .phone-screen img {
+  position: absolute;
 
-  width: 80%;
-  height: auto;
+  width: 100%; /* Ajusta el ancho al 100% del contenedor */
+  height: 100%; /* Ajusta la altura al 100% del contenedor */
 
-  border-radius: 70px; /* Bordes redondeados */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra 
-  */
+  border-radius: 10px; /* Bordes redondeados */
+  object-fit: cover; /* Asegura que la imagen se ajuste sin deformarse */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* video del segundo celular */
+.phone-video-background { 
+  /* display: flex; */
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  z-index: 1;
+  object-position: center;
+  object-fit: contain;
 }
 
 /* @media (prefers-color-scheme: light) {

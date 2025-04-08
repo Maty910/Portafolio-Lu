@@ -6,6 +6,9 @@ import carousel1 from '../assets/carousel1.jpg'
 import carousel2 from '../assets/carousel2.jpg'
 import carousel3 from '../assets/carousel3.jpg'
 import carousel4 from '../assets/carousel4.jpg'
+import phone3 from '../assets/phone3.png'
+
+const desa2 = './../../public/img/desa2.mp4';
 
 const Experience = () => {
   const [language, setLanguage] = useState('es');
@@ -39,7 +42,7 @@ const Experience = () => {
         </ul>
       </PhoneCard>
       {/* <!-- Teléfono 2 (con video, por ejemplo) --> */}
-      <PhoneCard type="single" images={[carousel1]}>
+      <PhoneCard type="video" video={desa2}>
         <ul>
           <li>Generar confianza</li>
           <li>Responder dudas</li>
@@ -47,7 +50,7 @@ const Experience = () => {
         </ul>
       </PhoneCard>
       {/* <!-- Teléfono 3 --> */}
-      <PhoneCard type="single" images={[carousel1]}>
+      <PhoneCard type="single" images={[phone3]}>
         <ul>
           <li>Generar confianza</li>
           <li>Responder dudas</li>
