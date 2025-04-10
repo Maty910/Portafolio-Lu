@@ -8,7 +8,13 @@ import carousel3 from '../assets/carousel3.jpg'
 import carousel4 from '../assets/carousel4.jpg'
 import phone3 from '../assets/phone3.png'
 
-const desa2 = './../../public/img/desa2.mp4';
+const desa2 = '/img/desa2.mp4';
+
+const carousel11 = '../assets/carousel1.jpg';
+const carousel22 = '../assets/carousel2.jpg';
+const carousel33 = '../assets/carousel3.jpg';
+const carousel44 = '../assets/carousel4.jpg';
+
 
 const Experience = () => {
   const [language, setLanguage] = useState('es');
@@ -34,10 +40,10 @@ const Experience = () => {
         onError={(e) => console.error("Error loading video:", e)}
       ></video>
       {/* <!-- Teléfono 1 --> */}
-      <PhoneCard type="carousel" images={[carousel1, carousel2, carousel3, carousel4]}>
+      <PhoneCard type="carousel" images={[carousel11, carousel22, carousel33, carousel44]}>
         <ul>
           <li>Claridad</li>
-          <li>Educativo de valor</li>
+          <li>Educativo y de valor</li>
           <li>Curiosidad</li>
         </ul>
       </PhoneCard>
@@ -52,9 +58,8 @@ const Experience = () => {
       {/* <!-- Teléfono 3 --> */}
       <PhoneCard type="single" images={[phone3]}>
         <ul>
-          <li>Generar confianza</li>
-          <li>Responder dudas</li>
-          <li>Llamado a la acción claro</li>
+          <li>Urgencia</li>
+          <li>CTA claro y directo</li>
         </ul>
       </PhoneCard>
     </section>
