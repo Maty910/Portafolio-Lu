@@ -1,57 +1,48 @@
-// import smartphone from '../img/smartphone.png';
-
 import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
-
+import smartphone from './../../public/img/smartphone.png'
 
 const PhoneCard = ({ type, images, video, children }) => {
-  //Configuracion basica de react-slick
   const sliderSettings = {
-    dots: true,
+    dots: false,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    fade: true,
+    cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)'
   }
   
   return (
     <div className='phone-card'>
-        {/* Mockup del smartphone */}
-        <img className='phone-frame' src="./img/smartphone.png" alt="Phone Mockup" />
-        {/* Contenido que va dentro de la pantalla */}
-        <div className='phone-screen'>
-          {
-            type === 'carousel' ? (
-              <Slider {...sliderSettings}>
-                {images.map((imgSrc, index) => (
-                  <div key={index}>
-                    <img src={imgSrc} alt={`Slide ${index}`} />
-                  </div>
-                ))}
-              </Slider>
-            ) : type === 'video' && video ? (
-                <>
-                  <video autoPlay loop muted className='phone-video-background'>
-                    <source src={video} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                </>
-            ) : (
-              /* Si no es carrusel, asumimos una sola imagen */
-              images && images.length > 0 ? (
-                <img src={images[0]} alt='Single' />
-              ) : (
-                <p>No image available</p>
-              )
-            )
-          }
-        </div>
-        <div className="phone-card-content">
+      <div className='phone-screen'>
+        {type === 'carousel' && (
+          <Slider {...sliderSettings}>
+            {images?.map((img, index) => (
+              <div key={index}>
+                <img src={img} alt={`Slide ${index}`} />
+              </div>
+            ))}
+          </Slider>
+        )}
+        {type === 'video' && video && (
+          <video autoPlay loop muted>
+            <source src={video} type="video/mp4" />
+          </video>
+        )}
+        {type === 'single' && images?.[0] && (
+          <img src={images[0]} alt="Single" />
+        )}
+      </div>
+      <img className='phone-frame' src={smartphone} alt="Phone Mockup" />
+      <div className="phone-card-content">
         {children}
       </div>
     </div>
   )
-}   
+}
 
 export default PhoneCard
