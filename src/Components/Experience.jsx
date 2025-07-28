@@ -1,14 +1,12 @@
 import { useState, useEffect } from "react";
-
 import PhoneCard from "./PhoneCard"
 
-// Si las imágenes están en la carpeta public/img, usar rutas públicas
-const carousel1 = './src/assets/carousel1.jpg';
-const carousel2 = './src/assets/carousel2.jpg';
-const carousel3 = './src/assets/carousel3.jpg';
-const carousel4 = './src/assets/carousel4.jpg';
-const phone3 = './src/assets/phone3.png';
-const desa2 = '/img/desa2.mp4';
+// Importa las imágenes correctamente
+import carousel1 from '../assets/carousel1.jpg';
+import carousel2 from '../assets/carousel2.jpg';
+import carousel3 from '../assets/carousel3.jpg';
+import carousel4 from '../assets/carousel4.jpg';
+import phone3 from '../assets/phone3.png';
 
 const Experience = () => {
   const [language, setLanguage] = useState('es');
@@ -24,11 +22,13 @@ const Experience = () => {
         autoPlay
         loop
         muted
+        playsInline
         preload="auto"
-        src="/img/fondo.mp4"
-        type="video/mp4"
         onError={(e) => console.error("Error loading video:", e)}
-      ></video>
+      >
+        <source src="/img/fondo.mp4" type="video/mp4" />
+        Tu navegador no soporta video HTML5.
+      </video>
       
       {/* Teléfono 1 - Carrusel */}
       <PhoneCard type="carousel" images={[carousel1, carousel2, carousel3, carousel4]}>
@@ -40,7 +40,7 @@ const Experience = () => {
       </PhoneCard>
       
       {/* Teléfono 2 - Video */}
-      <PhoneCard type="video" video={desa2}>
+      <PhoneCard type="video" video="/img/desa2.mp4">
         <ul>
           <li>Generar confianza</li>
           <li>Responder dudas</li>
