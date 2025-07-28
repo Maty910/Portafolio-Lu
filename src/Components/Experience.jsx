@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import PhoneCard from "./PhoneCard"
 
 // Importa las imágenes correctamente
@@ -9,13 +8,8 @@ import carousel4 from '../assets/carousel4.jpg';
 import phone3 from '../assets/phone3.png';
 
 const Experience = () => {
-  const [language, setLanguage] = useState('es');
-
-  useEffect(() => {
-    setLanguage('en');
-  }, []);
-
   return (
+
     <section className="phone-section">
       <video
         className="video-background"
